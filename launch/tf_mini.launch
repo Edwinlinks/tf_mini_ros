@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="tf_mini_ros" type="tf_mini_ros" name="tf_mini_ros">
+    </node>
+
+    <rosparam file="$(find tf_mini_ros)/config/tf_mini.yaml" command="load"/>
+
+    <node pkg="tf" type="static_transform_publisher" name="broadcasterTFplus" args="0 0 0 0 0 0 base_link TFplus 100"/>
+</launch>
