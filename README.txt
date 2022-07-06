@@ -1,22 +1,22 @@
 /**************************************************************************************************************************************
-/* Benewake TFplus infrared range sensor TFplus ROS package
+/* Benewake TF mini plus infrared range sensor TF mini plus ROS package
 /* Version 1.0
 /**************************************************************************************************************************************
 
 /**************************************************************************************************************************************
 /* Package Information
 /**************************************************************************************************************************************
-  Package:			tfplus_ros
-  Node:				tfplus_ros_node
+  Package:			tf_mini_ros
+  Node:				tf_mini_ros
   Published Topics:
     /tfplus_ros_node/TFplus (sensor_msgs/Range)
       The distance of object detected. 
-      Note: This node won't publish topic if no object exists within TFplus's measurement range, and the behavior can be changed in file 
-      /src/TFplus_ros_node.cpp
+      Note: This node won't publish topic if no object exists within TF_mini_plus's measurement range, and the behavior can be changed in file
+      /src/data.cpp
       
 /**************************************************************************************************************************************
 /* Quick Start
 /**************************************************************************************************************************************
-  $ cd tfplus_ros/src
+  $ cd tf_mini_ros/src
   $ catkin_make
-  $ roslaunch tfplus_ros tfplus.launch
+  $ roslaunch tf_mini_ros tf_mini.launch
