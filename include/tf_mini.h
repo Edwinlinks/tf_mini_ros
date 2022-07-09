@@ -32,12 +32,5 @@ public:
 private:
   void publishData();
   int checkSum();
-
-  ros::Time last_get_, last_send_;
-  const int k_frame_length_ = 128, k_header_length_ = 5, k_cmd_id_length_ = 2,
-            k_tail_length_ = 2;
-  const int k_unpack_buffer_length_ = 256;
-  uint8_t unpack_buffer_[256]{};
-  int client_id_;
 };
 } // namespace tf_mini_ros

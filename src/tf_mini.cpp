@@ -5,7 +5,7 @@
 
 namespace tf_mini_ros {
 
-TfMini::TfMini() : client_id_(0) {
+TfMini::TfMini() {
   ros::NodeHandle root_nh;
   tf_mini_pub_ = root_nh.advertise<sensor_msgs::Range>("/tf_mini", 100);
 }
