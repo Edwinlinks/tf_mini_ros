@@ -17,7 +17,6 @@ find_package(catkin REQUIRED
         roscpp
         sensor_msgs
         roslint
-        rm_msgs
         tf2_geometry_msgs
         serial
         std_msgs
@@ -46,7 +45,6 @@ catkin_package(
         sensor_msgs
         roscpp
         roslint
-        rm_msgs
         tf2_geometry_msgs
         std_msgs
         actionlib
