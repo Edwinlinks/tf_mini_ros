@@ -12,7 +12,7 @@ TfMini::TfMini() {
 
 int TfMini::checkSum() {
   int sumCheck = (0x59 + 0x59) % 256;
-  for (int i = 2; i < rx_len_ - 1; i++) {
+  for (unsigned int i = 2; i < rx_len_ - 1; i++) {
     sumCheck = (sumCheck + rx_buffer_[i]) % 256;
   }
   return sumCheck;

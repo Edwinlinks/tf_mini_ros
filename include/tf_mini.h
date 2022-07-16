@@ -25,8 +25,8 @@ public:
 
   ros::Publisher tf_mini_pub_;
   std::vector<uint8_t> rx_buffer_;
-  int rx_len_;
-  tfMiniData tf_mini_data_;
+  int rx_len_{};
+  tfMiniData tf_mini_data_{};
   sensor_msgs::Range tf_data_;
 
 private:
