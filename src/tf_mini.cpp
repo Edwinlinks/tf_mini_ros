@@ -11,11 +11,11 @@ TfMini::TfMini() {
 }
 
 int TfMini::verifyCheckSum() {
-  int sumCheck = (0x59 + 0x59) % 256;
+  int sum_check = (0x59 + 0x59) % 256;
   for (unsigned int i = 2; i < rx_len_ - 1; i++) {
-    sumCheck = (sumCheck + rx_buffer_[i]) % 256;
+    sum_check = (sum_check + rx_buffer_[i]) % 256;
   }
-  return sumCheck;
+  return sum_check;
 }
 
 void TfMini::unpack() {
