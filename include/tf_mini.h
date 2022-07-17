@@ -31,6 +31,6 @@ public:
 
 private:
   void publishData();
-  int checkSum();
+  int verifyCheckSum();
 };
 } // namespace tf_mini_ros

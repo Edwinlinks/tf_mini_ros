@@ -10,7 +10,7 @@ TfMini::TfMini() {
   tf_mini_pub_ = root_nh.advertise<sensor_msgs::Range>("/tf_mini", 100);
 }
 
-int TfMini::checkSum() {
+int TfMini::verifyCheckSum() {
   int sumCheck = (0x59 + 0x59) % 256;
   for (unsigned int i = 2; i < rx_len_ - 1; i++) {
     sumCheck = (sumCheck + rx_buffer_[i]) % 256;
@@ -19,7 +19,7 @@ int TfMini::checkSum() {
 }
 
 void TfMini::unpack() {
-  if (checkSum() == rx_buffer_[8]) {
+  if (verifyCheckSum() == rx_buffer_[8]) {
     tf_mini_data_.distance =
         (float)((rx_buffer_[3] << 8 | rx_buffer_[2]) / 100.0);
     tf_mini_data_.strength = (float)(rx_buffer_[5] << 8 | rx_buffer_[4]);
